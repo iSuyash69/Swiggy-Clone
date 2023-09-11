@@ -1,0 +1,21 @@
+{
+  "name": "swiggy-clone",
+  "version": "1.0.0",
+  "description": "Frontend Clone of  Swiggy Website",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "author": "Suyash Deshpande",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
