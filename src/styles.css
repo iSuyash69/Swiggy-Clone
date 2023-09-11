@@ -194,7 +194,7 @@ body::-webkit-scrollbar{
     grid-gap: 30px;
     grid-row-gap:32px ;
     overflow: auto;
-    overflow: hidden;
+    overflow: auto;
 }
 .resto-card-container::-webkit-scrollbar{
     display: none;
