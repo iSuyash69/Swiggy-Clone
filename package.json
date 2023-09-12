@@ -2,7 +2,7 @@
   "name": "swiggy-clone",
   "version": "1.0.0",
   "description": "Frontend Clone of  Swiggy Website",
-  "main": "index.js",
+
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html",
