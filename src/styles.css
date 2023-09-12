@@ -26,9 +26,23 @@ body::-webkit-scrollbar{
     z-index: 999;
     opacity: 95%;
 }
+.nav-logo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 .nav-logo img{
     width: 65px;
     height: 62px;
+}
+.nav-logo h1{
+    color:black;
+    display: flex;
+    align-items: center;
+}
+.nav-logo h1 span{
+    color:#FF6800;
+    font-size: 33px;
 }
 .nav-items ul{
     display: flex;
@@ -37,12 +51,17 @@ body::-webkit-scrollbar{
 }
 .nav-items ul li{
     font-size: 16px;
+    font-weight: 500;
     transition: all ease 0.3s;
 }
 .nav-items ul li:hover{
     cursor: pointer;
     color: #FF6800;
 }
+.nav-items ul li i{
+    font-size: 25px;
+}
+
 
 /* ----------------------body styling goes here------------------- */
 
@@ -182,6 +201,37 @@ body::-webkit-scrollbar{
     font-size: 22px;
     margin: 6px 0;
 }
+
+/* --------Filters styling goes here-------- */
+
+.filters-container{
+    display: flex;
+    gap: 10px;
+    margin-top: 1.5vh;
+    margin-bottom: 3vh;
+    margin-left: 1.5vw;
+    overflow: auto;
+}
+.filter-btn{
+    border: solid 1px #D8D8D8;
+    padding:8px 13px;
+    background-color: white;
+    border-radius:25px;
+    font-size: 13px;
+    color: rgb(2 6 12 / 70%);
+    font-weight: 400;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.filters-container::-webkit-scrollbar{
+    display: none;
+}
+.filter-btn:hover{
+    background-color:rgb(2 6 12 / 10%);
+}
+
+/* --------Restaurants-card styling goes here------- */
+
 .resto-card-container{
     margin-top: 2.5vh;
     display: grid;

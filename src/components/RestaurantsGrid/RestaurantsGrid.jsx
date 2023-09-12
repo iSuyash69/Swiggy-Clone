@@ -1,5 +1,6 @@
 import RestaurantsCard from "./RestaurantsCard";
 import resList from "../resList";
+import Filters from "../Filters";
 
 const RestaurantsGrid=()=>{
     return(
@@ -8,6 +9,7 @@ const RestaurantsGrid=()=>{
                 <hr></hr>
             </div>
             <h2 className="resto-title">Restaurants with online food delivery in Bangalore</h2>
+            <Filters/>
             <div className="resto-card-container">
                 {resList.restaurants.map((restaurants,i)=>(
                     <RestaurantsCard key={i} resData={restaurants}/>

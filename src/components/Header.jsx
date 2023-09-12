@@ -6,13 +6,15 @@ const Header=()=>{
            <nav className="nav">
                 <div className="nav-logo">
                     <img src={myImage} alt="mc"/>
+                    <h1><span>Z</span>wiggy</h1>
                 </div>
                 <div className="nav-items">
                     <ul>
-                        <li>Home</li>
-                        <li>About Us</li>
+                        <li>Offers</li>
+                        <li>Help</li>
                         <li>Contact us</li>
                         <li>Cart</li>
+                        <li><i class="fa-solid fa-user-plus"></i></li>
                     </ul>
                 </div>
            </nav> 
