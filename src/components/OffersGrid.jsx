@@ -1,4 +1,12 @@
-const OffersGrid=()=>{
+import { ShimmerOfferCard } from "./Shimmer";
+
+const OffersGrid=({OffersList})=>{
+
+    if(OffersList.length===0){
+        console.log(OffersList.length);
+        return ShimmerOfferCard();
+    }
+
     return(
         <div className="offers-grid">
             <div className="offers-title">
@@ -9,10 +17,10 @@ const OffersGrid=()=>{
                 </div>
             </div>
             <div className="offers-card">
-                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_850,h_504/rng/md/carousel/production/7b666ba42cfb1e2774c3ce6af3d4a013"/>
-                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_850,h_504/rng/md/carousel/production/b4178cc2ecc1ccb1f6b2b0638f609f0f"/>
-                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_850,h_504/rng/md/carousel/production/7004bb67da2bc79145552e05a4605d6e"/>
-                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_850,h_504/rng/md/carousel/production/7dec1c62b4e539323ea54bae5e152c62"/>
+                {OffersList.map((offers,i)=>{
+                   return <img className="offers-img" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_850,h_504/"+offers.imageId} key={i} alt="not loaded"></img>
+                    }
+                )}
             </div>
         </div>
     );

@@ -1,19 +1,26 @@
 import RestaurantsCard from "./RestaurantsCard";
-import resList from "../resList";
 import Filters from "../Filters";
+import {ShimmerRestoCard} from "../Shimmer";
 
-const RestaurantsGrid=()=>{
+const RestaurantsGrid=({RestaurantsList,FilteredList,setFilteredList})=>{
+
+    if(RestaurantsList.length===0){
+        console.log(RestaurantsList.length);
+        return ShimmerRestoCard();
+    }
+
     return(
         <div className="resto-grid">
             <div id="hr">
                 <hr></hr>
             </div>
             <h2 className="resto-title">Restaurants with online food delivery in Bangalore</h2>
-            <Filters/>
+            <Filters RestaurantsList={RestaurantsList} setFilteredList={setFilteredList}/>
             <div className="resto-card-container">
-                {resList.restaurants.map((restaurants,i)=>(
-                    <RestaurantsCard key={i} resData={restaurants}/>
-                ))}
+                {FilteredList.map((restaurants,i)=>{
+                   return <RestaurantsCard key={i} resData={restaurants}/>
+                }
+                )}
             </div>
         </div>
     );

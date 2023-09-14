@@ -39,10 +39,12 @@ body::-webkit-scrollbar{
     color:black;
     display: flex;
     align-items: center;
+    /* letter-spacing: 4px; */
+    /* font-size: 30px; */
 }
 .nav-logo h1 span{
     color:#FF6800;
-    font-size: 33px;
+    font-size: 35px;
 }
 .nav-items ul{
     display: flex;
@@ -160,18 +162,18 @@ body::-webkit-scrollbar{
     display: flex;
     /* justify-content: center; */
     align-self: center;
-    width: 97%;
+    max-width: 97%;
     gap: 22px;
     overflow:auto;
 }
 .offers-card::-webkit-scrollbar{
     display: none;
 }
-.offers-grid img{
+.offers-img{
     width: 450px;
     transition: transform 0.3s ease-in-out;
 }
-.offers-grid img:hover{
+.offers-img:hover{
     transform: scale(0.93);
     cursor: pointer;
 }
@@ -244,7 +246,6 @@ body::-webkit-scrollbar{
     grid-gap: 30px;
     grid-row-gap:32px ;
     overflow: auto;
-    overflow: auto;
 }
 .resto-card-container::-webkit-scrollbar{
     display: none;
@@ -309,6 +310,60 @@ body::-webkit-scrollbar{
 .resto-card:hover{
     transform: scale(0.93);
     cursor: pointer;
+}
+
+/* --------------------Shimmer UI styling goes here-------------------- */
+
+.shimmer-card-container{
+    /* display: flex; */
+    display: grid;
+    /* position: absolute; */
+    /* margin-top: 30.5vh; */
+    grid-template-columns: auto auto auto auto ;
+    max-width: 82%;
+    column-gap: 30px;
+    grid-row-gap:32px ;
+    overflow: auto;    
+    margin-bottom: 50px;
+    margin-top: 6vh;
+}
+.shimmer-card-container::-webkit-scrollbar{
+    display: none;
+}
+.shimmer-card{
+    width: 280px;
+    height: 200px;
+    background: linear-gradient(90deg, #f3f3f3 25%, #e1e1e1 50%, #f3f3f3 75%);
+    border-radius: 10px;
+    animation: shimmer 1.7s infinite;
+    background-size: 200% 100%;
+}
+.shimmer-offer-card-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    max-width: 90%;
+    gap: 22px;
+    margin-top: 5vh;
+    overflow: auto;
+}
+.shimmer-offer-card-container::-webkit-scrollbar{
+    display: none;
+}
+.shimmer-offer-card{
+    width: 420px;
+    height: 248px;
+    background: linear-gradient(90deg, #f3f3f3 25%, #e1e1e1 50%, #f3f3f3 75%);
+    border-radius: 20px;
+    animation: shimmer 1.7s infinite;
+    background-size: 200% 100%;
+}
+@keyframes shimmer{
+    0%{
+        background-position:100% ;
+    }
+    100%{
+        background-position:-100%;
+    }
 }
 
 

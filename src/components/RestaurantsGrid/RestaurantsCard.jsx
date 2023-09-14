@@ -1,6 +1,6 @@
-const RestaurantsCard=(props)=>{
+const RestaurantsCard=({resData})=>{
     // console.log(props);
-    const {resData}=props;
+
     return(
         <div className="resto-card">
             <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+resData.info.cloudinaryImageId} alt="error 404"/>
@@ -14,7 +14,7 @@ const RestaurantsCard=(props)=>{
                 <div id="rating-number">{resData.info.avgRating}</div>
             </div>
             <p>{resData.info.cuisines.join(", ")}</p>
-            <p>{resData.info.locality}</p>
+            <p>{resData.info.areaName}</p>
         </div>
     );
 }
