@@ -14,7 +14,7 @@ const RestaurantsGrid=({RestaurantsList,FilteredList,setFilteredList})=>{
             <div id="hr">
                 <hr></hr>
             </div>
-            <h2 className="resto-title">Restaurants with online food delivery in Bangalore</h2>
+            <h2 className="resto-title">Restaurants with online food delivery in Nashik</h2>
             <Filters RestaurantsList={RestaurantsList} setFilteredList={setFilteredList}/>
             <div className="resto-card-container">
                 {FilteredList.map((restaurants,i)=>{
